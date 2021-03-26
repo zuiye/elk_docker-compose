@@ -36,6 +36,8 @@ sed -i "s/123456/yourpassword/g" /opt/elk-compose//kibana/config/kibana.yml
 修改logstash配置中的密码，密码为刚才设置的密码
 
 sed -i "s/123456/yourpassword/g" /opt/elk-compose/logstash/config/logstash.conf
+
+
 sed -i "s/123456/yourpassword/g" /opt/elk-compose/logstash/config/logstash.yml
 
 
