@@ -31,15 +31,18 @@ docker exec -ti elasticsearch /usr/share/elasticsearch/bin/elasticsearch-setup-p
 修改kibana配置中的密码，密码为刚才设置的密码
 
 vi /opt/elk_docker-compose/kibana/config/kibana.yml
+
 替换yourpassword 和 elasticsearch IP
 
 
 修改logstash配置中的密码，密码为刚才设置的密码
 
 vi /opt/elk_docker-compose/logstash/config/logstash.conf
+
 替换yourpassword 和 elasticsearch IP
 
-sed -i "s/123456/yourpassword/g" /opt/elk_docker-compose/logstash/config/logstash.yml
+vi /opt/elk_docker-compose/logstash/config/logstash.yml
+
 替换yourpassword 和 elasticsearch IP
 
 #5、启动所有容器
