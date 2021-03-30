@@ -15,7 +15,7 @@ sysctl -p
 
 3、设置认证密码，需要先启动elasticsearch
 
-cd elk-compose
+cd elk_docker-compose
 
 docker-compose up -d elasticsearch
 
@@ -30,15 +30,15 @@ docker exec -ti elasticsearch /usr/share/elasticsearch/bin/elasticsearch-setup-p
 
 修改kibana配置中的密码，密码为刚才设置的密码
 
-sed -i "s/123456/yourpassword/g" /opt/elk-compose//kibana/config/kibana.yml
+sed -i "s/123456/yourpassword/g" /opt/elk_docker-compose/kibana/config/kibana.yml
 
 
 修改logstash配置中的密码，密码为刚才设置的密码
 
-sed -i "s/123456/yourpassword/g" /opt/elk-compose/logstash/config/logstash.conf
+sed -i "s/123456/yourpassword/g" /opt/elk_docker-compose/logstash/config/logstash.conf
 
 
-sed -i "s/123456/yourpassword/g" /opt/elk-compose/logstash/config/logstash.yml
+sed -i "s/123456/yourpassword/g" /opt/elk_docker-compose/logstash/config/logstash.yml
 
 
 5、启动所有容器
